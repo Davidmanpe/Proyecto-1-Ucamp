@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: auto;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+.nombre-empresa{
+    font-size: 0.8em;
+    margin-top: 50px;
+}
+h1{
+    font-size: 3.5em;
+}
+h2{
+    font-size: 2.7em;
+}
+h3{
+    font-size: 2emem;
+}
+p{
+    font-size: 1.25em;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+header{
+   
+ /* Los elementos se muestran de manera horizontal*/
+    display: flex;
+    min-height: 70px;
+    background-color: rgb(245,245,245);
+     /* Justifica elementos en el eje principal*/
+    justify-content: space-between;
+     /* Ubica el texto en el centro del encabezado*/
+    align-items: center;
+     /* Separa los elementos del borde*/
+    padding: 10px
+    
+}
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    color: black;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+img{
+    height:80px;
+    border-radius: 30px;
+    /*Separa el borde de la imagen con el texto*/
+    margin-right: 10px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+/*Modificar el estilo al momento de pasar el curso sobre la lista*/
+nav a:hover{
+    color: rgb(133, 133, 133); /* Al poner el cursor, se cambia de color*/
+
+}
+
+/*Colocar la pantalla minima al momento de minimizar*/
+@media (max-widht:720px)
+{
+    header{
+/*coloca la lista en modo columna al minimizar pantalla*/
+        flex-direction: column;
+
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+
+a:active{
+    color: rgb(131, 131, 131);
+}
+/*estilo de botones*/
+button{
+    font-size: 1.5em;
+    font-weight: bold;/*negrita */
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0.3);
+    box-shadow: 2px 2px 10px rgb(0, 0, 0.5);
+    color: white;
+    background-color: black;   
+}
+
+button:hover{
+    background-color: rgb(65, 65, 65);
+}
+/*contenedores*/
+.container{
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+#hero{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    /*imagen con filtro oscuro*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/paguinaDiana/hero.jpg");
+    /*ocupar todo el espacio y centrar imagen*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#somos h1{
+    color: white;
+}
+#somos{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#nuestro-catalogo{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#nuestro-catalogo p{
+    display: none;
+    text-align: justify;
+}
+
+#nuestro-catalogo h3{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+#nuestro-catalogo .container{
+
+    padding: 100px 12px;
+    
+}
+/*estilo de los div carta*/
+#nuestro-catalogo .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.carta:first-child{ /*se usa para poner las imagenes a cada div carta*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/paguinaDiana/Ropa.png");
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/paguinaDiana/accesorios.png");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/paguinaDiana/juguete3.png");
+}
+
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo2{
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.container-social, .menu-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.social-icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 0.5px solid rgb(179, 174, 174);
+    background-image: url("/paguinaDiana/facebookicono.png");
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+}
+
+.social-icon:hover{
+    background-color: rgb(104, 104, 104);
+    filter: invert(1);
+
+}
+
+
+.social-icon:nth-of-type(2){
+    background-image: url("/paguinaDiana/instagramicono.png");
+}
+.social-icon:nth-of-type(3){
+    background-image: url("/paguinaDiana/gmailicono.png");
+}
+
+
+
+.copyright{
+    color:black;
+    text-align: center;
+    margin: auto;
+}
+
+.logo2{
+    border: 0.5px solid rgb(179, 174, 174);
+}
+
+@media(min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #somos .img-container{
+        background-image: url("/paguinaDiana/Somos1.png");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+        border: 1px solid black;
+        border-radius: 50px;
+    }
+
+    #somos .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #somos .texto{
+        width:50%;
+        max-width: 600px;
+        text-align: justify;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 30px;
+    }
+
+    #somos .texto h2{
+        text-align: center;
+    }
+
+    #nuestro-catalogo .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestro-catalogo p{
+        display: block;
+        margin-bottom: 30px;
+    }
+    #nuestro-catalogo h3{
+
+        margin-top: 0;
+
+    }
+
+    #nuestro-catalogo .carta{
+        padding: 50px;
+    }
+    
+
+}
